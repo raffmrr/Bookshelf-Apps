@@ -1,0 +1,202 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.head-bar {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6495ed;
+    color: white;
+}
+
+.container {
+    max-width: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.bookshelf {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.bookshelf:hover {
+    transform: scale(1.02);
+}
+
+.bookshelf h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.add-book {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.add-book:hover {
+    transform: scale(1.02);
+}
+
+.add-book input[type="text"],
+.add-book input[type="number"],
+.add-book button {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+}
+
+.add-book button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.add-book button:hover {
+    background-color: #2980b9;
+}
+
+.input-container {
+    position: relative;
+    margin: 10px;
+}
+
+.input-container input {
+    padding: 10px;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+}
+
+.input-container label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 18px;
+    pointer-events: none;
+    transition: top 0.2s, font-size 0.2s, color 0.2s;
+    font-size: 14px;
+    color: #999;
+}
+
+.input-container > form > .input-inline {
+    margin: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.input-container > form > .input-inline > label {
+    color: #000;
+    margin-right: 10px;
+}
+
+.input-container input:focus + label,
+.input-container input:valid + label {
+    top: -18px;
+    font-size: 14px;
+    color: #000;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.action-buttons button {
+    margin-left: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #dfdfdf;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+li button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+li button:nth-child(2) {
+    background-color: #27ae60;
+}
+
+li button:hover {
+    opacity: 0.8;
+}
+
+@keyframes moveToCompleted {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes deleteBook {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
